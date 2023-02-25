@@ -1,0 +1,10 @@
+FUNCTION palindrome(mot :VARCHAR) : BOOLEAN
+VAR i :INTEGER; 
+BEGIN
+    FOR i FROM 0 TO (mot.length()-1) / 2 STEP 1 DO
+        If(mot[i] != mot[mot.length()-1-i])
+            return false;
+        END_IF
+    END_FOR
+    return true;
+END
